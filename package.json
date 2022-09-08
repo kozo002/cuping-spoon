@@ -1,0 +1,19 @@
+{
+  "name": "cupping-spoon",
+  "version": "1.0.0",
+  "description": "An example library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kozo002/cupping-spoon.git"
+  },
+  "author": "Kozo Yamagata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kozo002/cupping-spoon/issues"
+  },
+  "homepage": "https://github.com/kozo002/cupping-spoon#readme"
+}
