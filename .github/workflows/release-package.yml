@@ -1,0 +1,46 @@
+name: cupping-spoon
+
+on:
+  release:
+    types: [created]
+
+env:
+  NODE_VERSION: 16.12.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@kozo002'
+
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@kozo002'
+
+      - name: Package Install
+        run: npm install
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+
+      - name: Build
+        run: npm build
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
