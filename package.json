@@ -1,6 +1,6 @@
 {
   "name": "@kozo002/cupping-spoon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An example library",
   "main": "dist/index.js",
   "scripts": {
