@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/kozo002/cupping-spoon/issues"
   },
-  "homepage": "https://github.com/kozo002/cupping-spoon#readme"
+  "homepage": "https://github.com/kozo002/cupping-spoon#readme",
+  "files": [
+    "dist",
+    "main.js",
+    "example.js"
+  ]
 }
